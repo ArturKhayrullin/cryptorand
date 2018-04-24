@@ -1,0 +1,181 @@
+@font-face {
+ font-family: "Graphik";
+ src: url("../fonts/Graphik-Light.ttf") format("truetype");
+}
+
+@font-face {
+ font-family: "Plaak";
+ src: url("../fonts/Plaak.otf") format("opentype");
+}
+
+@font-face {
+ font-family: "Plaak Bold";
+ src: url("../fonts/Plaak-Bold.ttf") format("truetype");
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+html {
+	font-size:1vw;
+	color:#f2f2f0;
+	background:#0a0a0a;
+	font-family:'Graphik';
+}
+
+
+body {
+	counter-reset: section;
+}
+
+section {
+	height:100vh;
+	padding-left:16.60156%;
+	padding-right:16.60156%;
+	position:relative;
+
+}
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+.section-number {
+	font-family:'Plaak Bold';
+	font-size:1.40625rem;
+	letter-spacing:0.01000em;
+	font-weight:100;
+	color:#666666;
+}
+
+h1 {
+	font-family:'Plaak Bold';
+	font-size:1.05469rem;
+	letter-spacing:0.10000em;
+	color:#666666;
+}
+
+.section-number:before{
+	content:"0" counter(section);
+	counter-increment:section;
+
+}
+
+.big-text {
+	font-family:'Plaak';
+	font-size:3.86719rem;
+	line-height:1.30303;
+	letter-spacing:0.12000em;
+	margin:0;
+	padding:0;
+	font-weight:100;
+}
+
+.button {
+	display:inline-block;
+	background:none;
+	border:1px solid #545454;
+	border-radius:1000px;
+	font-size:1.01562rem;
+	color:#f2f2f0;
+	padding: 1.4em 0em;
+	width:11.01562vw;
+	cursor:pointer;
+	outline:none;
+}
+
+section .content {
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+	width:66.87500vw;
+}
+
+
+/*HOME*/
+section.home .big-text {
+	max-width:50.15625vw;
+	margin-bottom:3.9vw;
+
+}
+
+section.home h1 {
+	margin:0;
+	margin-bottom:5vw;
+	margin-top:0.4vw;
+}
+
+/*SERVICES*/
+
+/*section.services .content {
+	position:absolute;
+	top:25%;
+	transform:none;
+
+}*/
+
+.two-in-row {
+	display:flex;
+	justify-content: space-between;
+}
+
+section.services .two-in-row > div {
+	width:43.80841%;
+}
+
+section.services p {
+	font-size:1.01562rem;
+	line-height:1.96154;
+	margin-bottom:7vw;
+}
+
+section.services h1 {
+	margin-bottom:6vw;
+}
+
+section.services .big-text {
+	margin-bottom:1.8vw;
+}
+
+/*TRADING GROUP*/
+
+section.trading-group .big-text {
+	max-width:50.15625vw;
+	margin-bottom:5.6vw;
+	max-width:33.43750vw;
+
+}
+
+section.trading-group h1 {
+	margin:0;
+	margin-bottom:3.4vw;
+	margin-top:0.4vw;
+}
+
+section.trading-group p {
+	max-width:16.83902vw;
+	letter-spacing:0.05000em;
+	font-size:1.01562rem;
+	line-height:1.96154;
+	padding-top:0.8vw;
+}
+
+/*MEDIA*/
+
+section.media .big-text {
+	margin-bottom:3.9vw;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;	
+
+}
+
+section.media h1 {
+	margin:0;
+	margin-bottom:5vw;
+	margin-top:0.4vw;
+}
