@@ -7,6 +7,7 @@
 <meta name="description" content="Cryptocurrency analysis, building risk index. trader & researcher. blockchain advisor.">
 <meta name="author" content="Artur Khayrullin,  https://www.upwork.com/freelancers/~017f31eedae6ca78e5">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/jquery.fullpage.min.css">
 <link rel="stylesheet" href="./css/normalize.css">
 <link rel="stylesheet" href="./css/style.css">
 <!--[if lt IE 9]>
@@ -15,11 +16,54 @@
 <![endif]-->
 </head>
 <body>
-	<div class="static">
-
+	<div class="background-stuff">
+		<div class="polygon">
+			<div class="polygon">
+				<div class="polygon">
+					<div class="polygon">
+						<div class="polygon">
+						</div>						
+					</div>					
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="wrapper">
-		<section class="home">
+
+
+	<a href="#home" class="logo fixed">
+		<img src="./img/logo.png">
+	</a>
+
+<!-- 	<div class="gradient top fixed">
+	</div> -->
+
+	
+
+	<button class="menu fixed">
+		<div class="open-menu">
+			<div class="line">
+			</div>
+			<div class="line"></div>
+		</div>
+	</button>
+
+	<button id="scroll-down-arrow" class="fixed">
+	</button>
+
+	<div class="socials fixed">
+		<a href="twitter.com" target="_blank">
+			<img src="./img/Twitter-Icon.png">
+		</a>
+		<a href="medium.com" target="_blank">
+			<img src="./img/Medium-Icon.png">
+		</a>
+		<a href="mail.com" target="_blank">
+			<img src="./img/Mail-Icon.png">
+		</a>				
+	</div>
+
+	<div class="wrapper" id="wrapper">
+		<section class="home section" id="#home">
 			<div class="content">
 				<div class="section-number">
 				</div>
@@ -33,7 +77,7 @@
 			</div>
 		</section>
 
-		<section class="services">
+		<section class="services section">
 			<div class="content">
 				<div class="section-number">
 				</div>
@@ -58,7 +102,7 @@
 			</div>			
 		</section>
 
-		<section class="trading-group">
+		<section class="trading-group section">
 			<div class="content">
 				<div class="section-number">
 				</div>
@@ -79,20 +123,76 @@ management, security).</p>
 			</div>
 		</section>	
 
-		<section class="media">
+		<section class="media section">
 			<div class="content">
 				<div class="section-number">
 				</div>
 				<h1>MEDIA</h1>						
 				<div class="big-text">Interviews with the most important representatives in blockchain industry. Articles about trading and business.</div>
 
+				<div class="representatives">
+					<div class="row">
+						<img src="./img/wetrust.png" alt="WeTrust"/>
+						<img src="./img/qtum.png">
+						<img src="./img/neo.png">
+					</div>
+
+					<div class="row">
+						<img src="./img/monero.png">
+						<img src="./img/ark.png">
+						<span>And Others...</span>
+					</div>
+				</div>
+
 
 				<button class="button">
-					Explore
+					Read Articles
 				</button>
 			</div>
-		</section>			
+		</section>	
+
+		<section class="invest section">
+			<div class="content">
+				<div class="section-number">
+				</div>
+				<h1>INVEST FUND</h1>						
+				
+					<div class="invest-fund-content">
+						<div class="big-text">Blockground Capital</div>
+						<p>Investment firm focused exclusively on ventures, tokens, and projects related to blockchain tech, digital currency, and crypto assets.</p>
+						<button class="button">
+							Invest
+						</button>						
+					</div>
+
+			</div>			
+		</section>	
+
+		<section class="charity section">
+			<div class="content">
+				<img src="./img/charity.jpg" class="background-image">
+				<div class="section-number">
+				</div>
+				<h1>CHARITY</h1>
+				<div class="two-in-row">						
+					<div class="big-text">$ 12.000
+	Attracted funds 
+	in 2018</div>
+
+					<p>Donation will go to Kahankoro School (Ivory Coast). More than 400 kids go there everyday looking to learn, get some food and have fun.</p>
+				</div>
+
+				<div class="wallet-address">
+					<img src="./img/ethereum.png">
+					<span>0x93227CAB31e7b3f801e1FeE9a289d2dA6C5EE81e</span>
+				</div>
+			</div>
+		</section>						
 
 	</div>
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/jquery.fullpage.min.js"></script>
+	<script src="./js/script.js"></script>
 </body>
 </html>

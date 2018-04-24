@@ -13,11 +13,11 @@
  src: url("../fonts/Plaak-Bold.ttf") format("truetype");
 }
 
-::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+/*::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;  
 }
-
+*/
 html {
 	font-size:1vw;
 	color:#f2f2f0;
@@ -85,7 +85,7 @@ h1 {
 	padding: 1.4em 0em;
 	width:11.01562vw;
 	cursor:pointer;
-	outline:none;
+/*	outline:none;*/
 }
 
 section .content {
@@ -94,6 +94,174 @@ section .content {
 	transform:translateY(-50%);
 	width:66.87500vw;
 }
+
+
+#fp-nav.left {
+	left:0;
+}
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span,
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+	width:0.46875vw;
+	height:0.46875vw;
+	margin: -0.23438vw 0 0 -0.23438vw;
+	background:#666666;
+}
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+	background:#ffffff;
+}
+
+#fp-nav ul li, .fp-slidesNav ul li {
+	margin-left:7.81250vw;
+}
+
+.background-stuff {
+	position:fixed;
+	width:100vw;
+	height:100vh;
+}
+
+.polygon {
+	width:27.30469vw;
+	padding-bottom:115.16452%;
+	background:url(../img/polygon.png);
+	background-size:100%;
+	background-repeat:no-repeat;
+	background-position:center;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	position:absolute;
+}
+
+.polygon .polygon {
+	width:calc(100% - 5.42969vw);
+}
+
+.fixed {
+	position:fixed;
+	z-index:1000;
+}
+
+.logo {
+	position:fixed;
+	top:8.12500%;
+	left:8.28125%;
+}
+
+.logo img {
+	width:1.60156vw;
+}
+
+.menu {
+	display:block;
+	position:fixed;
+	background:none;
+	border:none;
+    top: 9.125%;
+    right: 6.18125%;
+	
+}
+
+.menu:hover {
+	cursor:pointer;
+}
+
+.menu .open-menu {
+	display:flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.menu .open-menu div {
+	width:1.91406vw;
+	height:0.15625vw;
+	margin-bottom:0.46875vw;
+	background:#f2f2f0;
+}
+
+.menu .open-menu div:last-of-type {
+	margin-bottom:0;
+	width:1.44531vw;
+}
+
+#scroll-down-arrow {
+	border:none;
+	background:transparent;
+	outline:none;
+	display:block;
+	width:2.89062vw;
+	height:2.89062vw;
+	border:1px solid #666666;
+	border-radius:50%;
+	bottom:8.12500%;
+	left:8.28125%;
+
+	background:url(../img/scroll-down-arrow.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:10.81081%;
+}
+
+.socials {
+    bottom: 7.425%;
+    right: 6.28125%;
+	display:flex;
+	align-items:center;
+}
+
+.socials a {
+	color:inherit;
+	text-decoration:none;
+	display:block;
+}
+
+.socials a:nth-of-type(1) {
+	width:1.56250vw;
+}
+
+.socials a:nth-of-type(2) {
+	width:1.40625vw;
+	margin:0px 1.32812vw;
+}
+
+.socials a:nth-of-type(3) {
+	width:1.56250vw;
+}  
+
+.socials a img {
+	display:block;
+	width:100%;
+}
+
+.gradient {
+	width:1px;
+	height:10.42969vw;
+	top:0;
+	left:calc(50% - 1px);
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#888784+0,14130e+100 */
+background: #888784; /* Old browsers */
+background: -moz-linear-gradient(top, #888784 0%, #14130e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #888784 0%,#14130e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #888784 0%,#14130e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888784', endColorstr='#14130e',GradientType=0 ); /* IE6-9 */	
+
+
+}
+
+/*.polygon .polygon {
+	width:21.87500vw;
+}
+
+.polygon .polygon .polygon {
+	width:16.40625vw;
+}
+
+.polygon .polygon .polygon .polygon {
+	width:280;
+}*/
+
 
 
 /*HOME*/
@@ -167,7 +335,7 @@ section.trading-group p {
 /*MEDIA*/
 
 section.media .big-text {
-	margin-bottom:3.9vw;
+	margin-bottom:5.5vw;
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;	
@@ -176,6 +344,119 @@ section.media .big-text {
 
 section.media h1 {
 	margin:0;
-	margin-bottom:5vw;
+	margin-bottom:3.3vw;
+	margin-top:0.7vw;
+}
+
+.representatives {
+	position:absolute;
+	bottom:0;
+	right:0;
+	width: 32.7375vw;
+
+}
+
+.representatives .row {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.representatives .row:nth-of-type(1) {
+	margin-bottom:1vw;
+}
+
+.representatives img:first-of-type {
+	width:6.44531rem;
+}
+
+.representatives img:nth-of-type(2) {
+	width:4.21875rem;
+}
+
+.representatives img:nth-of-type(3) {
+	width:6.09375rem;
+} 
+
+.representatives img:nth-of-type(4) {
+	width:6.95312rem;
+} 
+
+.representatives img:nth-of-type(5) {
+	width:3.51562rem;
+} 
+
+.representatives span {
+	font-size:1.01562rem;
+	letter-spacing:0.02000em;
+}
+
+/*INVEST FUND*/
+
+
+section.invest .invest-fund-content {
+	width:29.29688vw;
+}
+
+section.invest p {
+	font-size:1.01562rem;
+	line-height:1.96154;
+	margin-bottom:8vw;
+}
+
+section.invest h1 {
+	margin-bottom:3vw;
+}
+
+section.invest .big-text {
+	margin-bottom:1.8vw;
+}
+
+/*CHARITY*/
+
+section.charity .big-text {
+	max-width:23.67969vw;
+	margin-bottom:6.2vw;
+	position:relative;
+
+}
+
+section.charity h1 {
+	margin:0;
+	margin-bottom:3.4vw;
 	margin-top:0.4vw;
+	position:relative;
+}
+
+section.charity p {
+	max-width:16.83902vw;
+	letter-spacing:0.05000em;
+	font-size:1.01562rem;
+	line-height:1.96154;
+	padding-top:0.8vw;
+	position:relative;
+}
+
+section.charity .background-image {
+	position:absolute;
+	width:40.07812vw;
+	left:50%;
+	transform:translateX(-50%);
+	top:17%;
+
+}
+
+section.charity .wallet-address {
+	display:flex;
+	align-items:center;
+}
+
+section.charity .wallet-address img {
+	width:1.71875vw;
+	margin-right:2.34375vw;
+}
+
+section.charity .wallet-address {
+	font-size:1.01562rem;
+	letter-spacing:0.05000em;
 }
