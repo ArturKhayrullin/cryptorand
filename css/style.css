@@ -85,6 +85,8 @@ h1 {
 	padding: 1.4em 0em;
 	width:11.01562vw;
 	cursor:pointer;
+	text-decoration: none;
+	color:inherit;
 /*	outline:none;*/
 }
 
@@ -202,6 +204,7 @@ section .content {
 	background-position:center center;
 	background-repeat:no-repeat;
 	background-size:10.81081%;
+	cursor:pointer;
 }
 
 .socials {
@@ -261,6 +264,98 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888784', end
 .polygon .polygon .polygon .polygon {
 	width:280;
 }*/
+
+
+
+.modal {
+	width:100vw;
+	height:100vh;
+	position:fixed;
+	background:#0a0a0a;
+	z-index:1001;
+	display:none;
+	opacity:0;
+}
+
+.modal-window {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	width:59.96094vw;
+	height:37.73438vw;
+	background:#1a1a1a;
+}
+
+.modal-window-content {
+	padding:0vw 9.96094vw;
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+
+}
+
+.modal-window-content .big-text {
+	margin-bottom:2.89219vw;
+}
+
+.modal-window-content p {
+	font-size:1.01562rem;
+	letter-spacing:0.05000em;
+	line-height:1.96154;
+	margin-bottom:1.25312vw;
+}
+
+.modal-window-content form {
+	margin-bottom:1.25312vw;
+}
+
+
+
+.modal-window-content form input, .modal-window-content form textarea {
+	display:block;
+	width:100%;
+	margin:0;
+	padding:0;
+	background:#3a3a3a;
+	font-size:1.01562rem;
+	letter-spacing:0.05000em;
+	padding:1.30625rem;
+	border:none;
+}
+
+.modal-window-content form input {
+	margin-bottom:0.97656vw;
+}
+
+.modal-window-content form textarea {
+	min-height:7.6vw;
+}
+
+::-webkit-input-placeholder {color:#f2f2f0;}
+::-moz-placeholder          {color:#f2f2f0;}/* Firefox 19+ */
+:-moz-placeholder           {color:#f2f2f0;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#f2f2f0;}
+
+.close {
+	background:none;
+	border:none;
+	width:2.89062vw;
+	height:2.89062vw;
+	border:1px solid #666666;
+	border-radius:50%;
+	background:url(../img/Close.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:33.78400%;
+	cursor:pointer;
+}
+
+.modal .close {
+	position:absolute;
+	top:3.08594vw;
+	right:3.55469vw;
+}
 
 
 

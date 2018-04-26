@@ -3,10 +3,27 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8">
-<title>CryptoRand</title>
+<title>Crypto Rand</title>
 <meta name="description" content="Cryptocurrency analysis, building risk index. trader & researcher. blockchain advisor.">
 <meta name="author" content="Artur Khayrullin,  https://www.upwork.com/freelancers/~017f31eedae6ca78e5">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="./css/jquery.fullpage.min.css">
 <link rel="stylesheet" href="./css/normalize.css">
 <link rel="stylesheet" href="./css/style.css">
@@ -37,7 +54,7 @@
 <!-- 	<div class="gradient top fixed">
 	</div> -->
 
-	
+
 
 	<button class="menu fixed">
 		<div class="open-menu">
@@ -51,16 +68,62 @@
 	</button>
 
 	<div class="socials fixed">
-		<a href="twitter.com" target="_blank">
+		<a href="twitter.com" target="_blank" href="https://twitter.com/crypto_rand">
 			<img src="./img/Twitter-Icon.png">
 		</a>
-		<a href="medium.com" target="_blank">
+		<a href="medium.com" target="_blank" href="https://medium.com/@cryptorand">
 			<img src="./img/Medium-Icon.png">
 		</a>
-		<a href="mail.com" target="_blank">
+		<a href="mailto:somemail@crypto.rand" target="_blank">
 			<img src="./img/Mail-Icon.png">
 		</a>				
 	</div>
+
+	<div class="modal" id="services-modal">
+		<div class="modal-window">
+			<button class="close">
+
+			</button>
+			<div class="modal-window-content">
+				<div class="big-text">
+					LEARN MORE
+				</div>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+
+				<button class="button modal-opener" data-modal="get-in-touch-modal">
+					Get in Touch
+					</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="get-in-touch-modal" papoog="true">
+		<div class="modal-window">
+
+			<div class="modal-window-content">
+				<div class="big-text">
+					GET IN TOUCH
+				</div>
+
+				<form>
+					<input type="text" name="name" placeholder="Name" required>
+					<input type="email" name="email" placeholder="E-mail" required>
+					<textarea name="message" placeholder="Message"></textarea>
+
+				</form>
+
+				<button class="button modal-opener" data-modal="get-in-touch-modal">
+					Get in Touch
+					</button>
+			</div>
+
+			<button class="close">
+
+			</button>			
+		</div>
+	</div>	
 
 	<div class="wrapper" id="wrapper">
 		<section class="home section" id="#home">
@@ -71,7 +134,7 @@
 				<div class="big-text">Cryptocurrency analysis, building risk index. trader & researcher. blockchain advisor.</div>
 
 
-				<button class="button">
+				<button class="button" onclick="$.fn.fullpage.moveSectionDown();">
 					Explore
 				</button>
 			</div>
@@ -86,7 +149,7 @@
 					<div>
 						<div class="big-text">PUBLIC</div>
 						<p>Assesement on trading and access to investment fund to participate on ICO's with the best conditions.</p>
-						<button class="button">
+						<button class="button modal-opener" data-modal="services-modal">
 							Learn More
 						</button>						
 					</div>
@@ -94,7 +157,7 @@
 					<div>
 						<div class="big-text">PRIVATE</div>
 						<p>Assesement on token structure, marketing, ICO process, funding.</p>
-						<button class="button">
+						<button class="button modal-opener" data-modal="services-modal">
 							Learn More
 						</button>							
 					</div>
@@ -117,9 +180,9 @@ Lessons with the keys for Crypto (RSI, Volume, patterns, more indicators, strate
 management, security).</p>
 				</div>
 
-				<button class="button">
+				<button class="button modal-opener" data-modal="get-in-touch-modal">
 					Get in Touch
-				</button>
+					</button>
 			</div>
 		</section>	
 
@@ -145,9 +208,9 @@ management, security).</p>
 				</div>
 
 
-				<button class="button">
+				<a class="button" href="https://medium.com/@cryptorand" target="_blank">
 					Read Articles
-				</button>
+				</a>
 			</div>
 		</section>	
 
@@ -160,7 +223,7 @@ management, security).</p>
 					<div class="invest-fund-content">
 						<div class="big-text">Blockground Capital</div>
 						<p>Investment firm focused exclusively on ventures, tokens, and projects related to blockchain tech, digital currency, and crypto assets.</p>
-						<button class="button">
+						<button class="button modal-opener" data-modal="get-in-touch-modal">
 							Invest
 						</button>						
 					</div>
