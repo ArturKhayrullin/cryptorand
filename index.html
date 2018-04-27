@@ -1,261 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta charset="utf-8">
-<title>Crypto Rand</title>
-<meta name="description" content="Cryptocurrency analysis, building risk index. trader & researcher. blockchain advisor.">
-<meta name="author" content="Artur Khayrullin,  https://www.upwork.com/freelancers/~017f31eedae6ca78e5">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="./css/jquery.fullpage.min.css">
-<link rel="stylesheet" href="./css/normalize.css">
-<link rel="stylesheet" href="./css/style.css">
-<!--[if lt IE 9]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Crypto Rand</title>
+    <meta name="description" content="Cryptocurrency analysis, building risk index. trader & researcher. blockchain advisor.">
+    <meta name="author" content="Artur Khayrullin,  https://www.upwork.com/freelancers/~017f31eedae6ca78e5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
+
 <body>
-	<div class="background-stuff">
-		<div class="polygon">
-			<div class="polygon">
-				<div class="polygon">
-					<div class="polygon">
-						<div class="polygon">
-						</div>						
-					</div>					
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<a href="#home" class="logo fixed">
+    <div class="background-stuff">
+        <div class="polygon">
+            <div class="polygon">
+                <div class="polygon">
+                    <div class="polygon">
+                        <div class="polygon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#home" class="logo fixed">
 		<img src="./img/logo.png">
 	</a>
-
-<!-- 	<div class="gradient top fixed">
+    <!-- 	<div class="gradient top fixed">
 	</div> -->
-
-
-
-	<button class="menu fixed">
-		<div class="open-menu">
-			<div class="line">
-			</div>
-			<div class="line"></div>
-		</div>
-	</button>
-
-	<button id="scroll-down-arrow" class="fixed">
-	</button>
-
-	<div class="socials fixed">
-		<a href="twitter.com" target="_blank" href="https://twitter.com/crypto_rand">
+    <button class="menu-opener fixed">
+        <div class="open-menu">
+            <div class="line">
+            </div>
+            <div class="line"></div>
+        </div>
+    </button>
+    <button id="scroll-down-arrow" class="fixed">
+    </button>
+    <div class="socials fixed">
+        <a href="twitter.com" target="_blank" href="https://twitter.com/crypto_rand">
 			<img src="./img/Twitter-Icon.png">
 		</a>
-		<a href="medium.com" target="_blank" href="https://medium.com/@cryptorand">
+        <a href="medium.com" target="_blank" href="https://medium.com/@cryptorand">
 			<img src="./img/Medium-Icon.png">
 		</a>
-		<a href="mailto:somemail@crypto.rand" target="_blank">
+        <a href="mailto:somemail@crypto.rand" target="_blank">
 			<img src="./img/Mail-Icon.png">
-		</a>				
-	</div>
+		</a>
+    </div>
+    <div id="menu" class="menu">
+    	<img src="./img/menu/graph.png" class="menu-graph">
+    	<div class="menu-scrollbar-fix">
+		<div class="menu-wrapper">
+			<div class="menu-content">
+				<div class="menu-item slide-opener" data-slide="2">
+					<div class="tint">
+					</div>
 
-	<div class="modal" id="services-modal">
-		<div class="modal-window">
-			<button class="close">
+					<img class="thumbnail" src="./img/menu/01.jpg">
 
-			</button>
-			<div class="modal-window-content">
-				<div class="big-text">
-					LEARN MORE
+					<div class="big-text">
+						02<br>
+						Services
+					</div>
+				</div>
+				<div class="menu-item slide-opener" data-slide="3">
+					<div class="tint">
+					</div>
+
+					<img class="thumbnail" src="./img/menu/02.jpg">
+
+					<div class="big-text">
+						03<br>
+						Trading Group
+					</div>
+				</div>	
+				<div class="menu-item slide-opener" data-slide="4">
+					<div class="tint">
+					</div>
+
+					<img class="thumbnail" src="./img/menu/03.jpg">
+
+					<div class="big-text">
+						04<br>
+						Media
+					</div>
 				</div>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+				<div class="menu-item slide-opener" data-slide="5">
+					<div class="tint">
+					</div>
 
-				<button class="button" data-modal="get-in-touch-modal" onclick="$(this).closest('.modal').find('.close').click();">
-					Get in Touch
-				</button>
+					<img class="thumbnail" src="./img/menu/03.jpg">
+
+					<div class="big-text">
+						05<br>
+						Invest Fund
+					</div>
+				</div>
+				<div class="menu-item slide-opener" data-slide="6">
+					<div class="tint">
+					</div>
+
+					<img class="thumbnail" src="./img/menu/03.jpg">
+
+					<div class="big-text">
+						06<br>
+						Charity
+					</div>
+				</div>															
 			</div>
+
+
 		</div>
-	</div>
 
-	<div class="modal" id="get-in-touch-modal" papoog="true">
-		<div class="modal-window">
-
-			<div class="modal-window-content">
-				<div class="big-text">
-					GET IN TOUCH
-				</div>
-
-				<form>
-					<input type="text" name="name" placeholder="Name" required>
-					<input type="email" name="email" placeholder="E-mail" required>
-					<textarea name="message" placeholder="Message"></textarea>
-
-				</form>
-
-				<button class="button modal-opener" data-modal="get-in-touch-modal">
-					Get in Touch
-					</button>
-			</div>
-
-			<button class="close">
-
-			</button>			
 		</div>
-	</div>	
-
-	<div class="wrapper" id="wrapper">
-		<section class="home section" id="#home">
-			<div class="content">
-				<div class="section-number">
+			<div class="menu-bar">
+				<div class="menu-bar-handle">
 				</div>
-				<h1>&nbsp</h1>						
-				<div class="big-text">Cryptocurrency analysis, building risk index. trader & researcher. blockchain advisor.</div>
+			</div>		
+        <img src="./img/logo.png" class="menu-logo slide-opener" data-slide="1">
+        <button class="close">
+        </button>
+
+        <div class="scroll-to-discover">
+        	Scroll to Discover
+        </div>
+
+		<div class="who-made-it modal-opener" data-modal="who-made-it-modal">
+			Who made it?
+		</div>
+
+		<div class="menu-get-in-touch modal-opener" data-modal="get-in-touch-modal">
+			Get in Touch
+		</div>
+
+    <div class="socials fixed">
+        <a href="twitter.com" target="_blank" href="https://twitter.com/crypto_rand">
+			<img src="./img/Twitter-Icon.png">
+		</a>
+        <a href="medium.com" target="_blank" href="https://medium.com/@cryptorand">
+			<img src="./img/Medium-Icon.png">
+		</a>
+        <a href="mailto:somemail@crypto.rand" target="_blank">
+			<img src="./img/Mail-Icon.png">
+		</a>
+    </div>				
+
+    </div>
+
+    <div class="modal" id="who-made-it-modal">
+
+		<a href="#home" class="logo fixed">
+			<img src="./img/logo.png">
+		</a>
+
+		<div class="made-by-text">
+			Design & Development 
+by <u>Hoso BurÖ</u>
+		</div>
+
+		            <button class="close" style="display:none">
+            </button>
+		<div class="text-close" onclick="$(this).closest('.modal').find('.close').click();">
+			Close
+		</div>
+
+    </div>
 
 
-				<button class="button" onclick="$.fn.fullpage.moveSectionDown();">
-					Explore
-				</button>
-			</div>
-		</section>
-
-		<section class="services section">
-			<div class="content">
-				<div class="section-number">
-				</div>
-				<h1>SERVICES</h1>						
-				<div class="two-in-row">
-					<div>
-						<div class="big-text">PUBLIC</div>
-						<p>Assesement on trading and access to investment fund to participate on ICO's with the best conditions.</p>
-						<button class="button modal-opener" data-modal="services-modal">
-							Learn More
-						</button>						
-					</div>
-
-					<div>
-						<div class="big-text">PRIVATE</div>
-						<p>Assesement on token structure, marketing, ICO process, funding.</p>
-						<button class="button modal-opener" data-modal="services-modal">
-							Learn More
-						</button>							
-					</div>
-				</div>
-			</div>			
-		</section>
-
-		<section class="trading-group section">
-			<div class="content">
-				<div class="section-number">
-				</div>
-				<h1>TRADING GROUP</h1>
-				<div class="two-in-row">						
-				<div class="big-text">Private community with 
-provide guidance and projects assessment</div>
-
-				<p>Daily analysis of Bitcoin and cryptocurrencies. Tips or 
-requests for coins or news. 
-Lessons with the keys for Crypto (RSI, Volume, patterns, more indicators, strategies, risk 
-management, security).</p>
-				</div>
-
-				<button class="button modal-opener" data-modal="get-in-touch-modal">
-					Get in Touch
-					</button>
-			</div>
-		</section>	
-
-		<section class="media section">
-			<div class="content">
-				<div class="section-number">
-				</div>
-				<h1>MEDIA</h1>						
-				<div class="big-text">Interviews with the most important representatives in blockchain industry. Articles about trading and business.</div>
-
-				<div class="representatives">
-					<div class="row">
-						<img src="./img/wetrust.png" alt="WeTrust"/>
-						<img src="./img/qtum.png">
-						<img src="./img/neo.png">
-					</div>
-
-					<div class="row">
-						<img src="./img/monero.png">
-						<img src="./img/ark.png">
-						<span>And Others...</span>
-					</div>
-				</div>
-
-
-				<a class="button" href="https://medium.com/@cryptorand" target="_blank">
+    <div class="modal" id="services-modal">
+        <div class="modal-window">
+            <button class="close">
+            </button>
+            <div class="modal-window-content">
+                <div class="big-text">
+                    LEARN MORE
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                <button class="button modal-opener" data-modal="get-in-touch-modal">
+                    Get in Touch
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="get-in-touch-modal" >
+        <div class="modal-window">
+            <div class="modal-window-content">
+                <div class="big-text">
+                    GET IN TOUCH
+                </div>
+                <form>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <textarea name="message" placeholder="Message"></textarea>
+                </form>
+                <button class="button" data-modal="get-in-touch-modal"  onclick="$(this).closest('.modal').find('.close').click();">
+                    Get in Touch
+                </button>
+            </div>
+            <button class="close">
+            </button>
+        </div>
+    </div>
+    <div class="wrapper" id="wrapper">
+        <section class="home section" id="#home">
+            <div class="content">
+                <div class="section-number">
+                </div>
+                <h1>&nbsp</h1>
+                <div class="big-text">Cryptocurrency analysis, building risk index. trader & researcher. blockchain advisor.</div>
+                <button class="button" onclick="$.fn.fullpage.moveSectionDown();">
+                    Explore
+                </button>
+            </div>
+        </section>
+        <section class="services section">
+            <div class="content">
+                <div class="section-number">
+                </div>
+                <h1>SERVICES</h1>
+                <div class="two-in-row">
+                    <div>
+                        <div class="big-text">PUBLIC</div>
+                        <p>Assesement on trading and access to investment fund to participate on ICO's with the best conditions.</p>
+                        <button class="button modal-opener" data-modal="services-modal">
+                            Learn More
+                        </button>
+                    </div>
+                    <div>
+                        <div class="big-text">PRIVATE</div>
+                        <p>Assesement on token structure, marketing, ICO process, funding.</p>
+                        <button class="button modal-opener" data-modal="services-modal">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="trading-group section">
+            <div class="content">
+                <div class="section-number">
+                </div>
+                <h1>TRADING GROUP</h1>
+                <div class="two-in-row">
+                    <div class="big-text">Private community with provide guidance and projects assessment</div>
+                    <p>Daily analysis of Bitcoin and cryptocurrencies. Tips or requests for coins or news. Lessons with the keys for Crypto (RSI, Volume, patterns, more indicators, strategies, risk management, security).</p>
+                </div>
+                <button class="button modal-opener" data-modal="get-in-touch-modal">
+                    Get in Touch
+                </button>
+            </div>
+        </section>
+        <section class="media section">
+            <div class="content">
+                <div class="section-number">
+                </div>
+                <h1>MEDIA</h1>
+                <div class="big-text">Interviews with the most important representatives in blockchain industry. Articles about trading and business.</div>
+                <div class="representatives">
+                    <div class="row">
+                        <img src="./img/wetrust.png" alt="WeTrust" />
+                        <img src="./img/qtum.png">
+                        <img src="./img/neo.png">
+                    </div>
+                    <div class="row">
+                        <img src="./img/monero.png">
+                        <img src="./img/ark.png">
+                        <span>And Others...</span>
+                    </div>
+                </div>
+                <a class="button" href="https://medium.com/@cryptorand" target="_blank">
 					Read Articles
 				</a>
-			</div>
-		</section>	
-
-		<section class="invest section">
-			<div class="content">
-				<div class="section-number">
-				</div>
-				<h1>INVEST FUND</h1>						
-				
-					<div class="invest-fund-content">
-						<div class="big-text">Blockground Capital</div>
-						<p>Investment firm focused exclusively on ventures, tokens, and projects related to blockchain tech, digital currency, and crypto assets.</p>
-						<button class="button modal-opener" data-modal="get-in-touch-modal">
-							Invest
-						</button>						
-					</div>
-
-			</div>			
-		</section>	
-
-		<section class="charity section">
-			<div class="content">
-				<img src="./img/charity.jpg" class="background-image">
-				<div class="section-number">
-				</div>
-				<h1>CHARITY</h1>
-				<div class="two-in-row">						
-					<div class="big-text">$ 12.000
-	Attracted funds 
-	in 2018</div>
-
-					<p>Donation will go to Kahankoro School (Ivory Coast). More than 400 kids go there everyday looking to learn, get some food and have fun.</p>
-				</div>
-
-				<div class="wallet-address">
-					<img src="./img/ethereum.png">
-					<span>0x93227CAB31e7b3f801e1FeE9a289d2dA6C5EE81e</span>
-				</div>
-			</div>
-		</section>						
-
-	</div>
-
-	<script src="./js/jquery.js"></script>
-	<script src="./js/jquery.fullpage.min.js"></script>
-	<script src="./js/script.js"></script>
+            </div>
+        </section>
+        <section class="invest section">
+            <div class="content">
+                <div class="section-number">
+                </div>
+                <h1>INVEST FUND</h1>
+                <div class="invest-fund-content">
+                    <div class="big-text">Blockground Capital</div>
+                    <p>Investment firm focused exclusively on ventures, tokens, and projects related to blockchain tech, digital currency, and crypto assets.</p>
+                    <button class="button modal-opener" data-modal="get-in-touch-modal">
+                        Invest
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="charity section">
+            <div class="content">
+                <img src="./img/charity.jpg" class="background-image">
+                <div class="section-number">
+                </div>
+                <h1>CHARITY</h1>
+                <div class="two-in-row">
+                    <div class="big-text">$ 12.000 Attracted funds in 2018</div>
+                    <p>Donation will go to Kahankoro School (Ivory Coast). More than 400 kids go there everyday looking to learn, get some food and have fun.</p>
+                </div>
+                <div class="wallet-address">
+                    <img src="./img/ethereum.png">
+                    <span>0x93227CAB31e7b3f801e1FeE9a289d2dA6C5EE81e</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.fullpage.min.js"></script>
+    <script src="./js/jquery.mousewheel.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
