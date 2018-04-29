@@ -124,21 +124,43 @@ section .content {
 	height:100vh;
 }
 
+
 .polygon {
-	width:27.30469vw;
-	padding-bottom:115.16452%;
-	background:url(../img/polygon.png);
-	background-size:100%;
-	background-repeat:no-repeat;
-	background-position:center;
 	top:50%;
 	left:50%;
 	transform:translate(-50%, -50%);
 	position:absolute;
 }
 
+
 .polygon .polygon {
-	width:calc(100% - 5.42969vw);
+	width:calc(100% - 83.28754px);
+}
+
+.polygon #polygon-circle {
+	width:1.71875vw;
+	height:1.71875vw;
+	background:rgba(255,255,255,0.2);
+	border:none;
+	border-radius:50%;
+	position:absolute;
+	top:0;
+	left:0;
+	top: -0.8vw;
+    left: -0.8vw;
+	
+}
+
+.polygon #polygon-circle .inner-circle {
+	position:absolute;
+	left:0.39062vw;
+	top:0.39062vw;
+	background:none;
+	width:0.93750vw;
+	height:0.93750vw;
+	border:0.35156vw solid #ffffff;
+	border-radius:50%;
+	box-sizing:border-box;
 }
 
 .fixed {
@@ -230,6 +252,7 @@ section .content {
 	display:block;
 	transform:translate(0%, 0%);
 	transition: all ease-in-out 0.5s;
+	filter:brightness(80%);
 }
 
 .menu-item .big-text {
@@ -300,6 +323,22 @@ section .content {
 
 .menu-get-in-touch {
 	right:16.87500%;
+}
+
+.link-underline:after{
+	display:block;
+	height:1px;
+	width:0%;
+	bottom:-5px;
+	content:'';
+	background:#ffffff;
+	position:absolute;
+	transition:all ease-in-out .3s;
+	cursor:pointer;
+}
+
+.link-underline:hover:after {
+	width:100%;
 }
 
 
@@ -530,6 +569,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888784', end
 	transform:translateY(-50%);
 }
 
+
+
 .text-close {
 	font-size:1.01562rem;
 	cursor:pointer;
@@ -539,11 +580,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888784', end
 	transform:translateX(-50%);
 }
 
+
+#who-made-it-modal svg {
+    width: 66.241vw;
+    position: absolute;
+    left: 16.60156vw;
+    top: 33.5%;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+#who-made-it-modal svg text {
+	font-family:'Plaak';
+	letter-spacing:22.8px;
+
+}
+
+
+
 .menu-graph {
-	width:100%;
+	width:110%;
 	position:absolute;
 	top:50%;
-	transform:translateY(-30%);
+	left:0%;
+	transform:translateY(-30%) translateX(0%);
+	transition:all 0.05s;
 }
 
 
@@ -679,6 +740,7 @@ section.media h1 {
 
 section.invest .invest-fund-content {
 	width:29.29688vw;
+	position:relative;
 }
 
 section.invest p {
@@ -693,6 +755,13 @@ section.invest h1 {
 
 section.invest .big-text {
 	margin-bottom:1.8vw;
+}
+
+section.invest img {
+	position:absolute;
+	width:16.64062vw;
+	top: 4vw;
+    left: 50.2vw;
 }
 
 /*CHARITY*/
