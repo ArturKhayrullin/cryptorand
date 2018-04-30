@@ -35,6 +35,8 @@ $(document).ready(function() {
         }
     });
 
+    $('#polygon-circle .inner-circle').css('border-width',($(window).width()*0.35156/100)+'px');
+
     var modalsOpeningSpeed = 300;
     $('.modal-opener').click(function() {
         var button = $(this);
