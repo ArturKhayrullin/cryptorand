@@ -1283,6 +1283,7 @@ section.charity .wallet-address {
         right: initial;
         left: 12%;
         bottom: 8.5%;
+        display:block;
     }
 
     .menu .socials {
