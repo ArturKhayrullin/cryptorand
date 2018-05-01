@@ -82,7 +82,8 @@ h1 {
 .button {
     display: inline-block;
     background: none;
-    border: 1px solid #545454;
+    border: 0.5px solid #545454;
+    background:transparent;
     border-radius: 1000px;
     font-size: 1.01562rem;
     color: #f2f2f0;
@@ -91,7 +92,58 @@ h1 {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
+    position:relative;
+    overflow:hidden;
+    transform:translateZ(0) scale(1.0, 1.0);
+
     /*	outline:none;*/
+}
+
+.button.filled {
+	background-color:#545454;
+}
+
+
+
+.button span {
+	position:relative;
+	z-index:100;
+}
+
+.button:before {
+	position: absolute;
+    content: '';
+    display: block;
+    transform-origin: right center;
+    width: 130%;
+    height: 102%;
+    background: rgba(255,255,255,0.1);
+    transform: skew(-30deg) translateX(-100%) translateY(-50%) translateZ(0) scale(1.0, 1.0);
+    top: 50%;
+    right: -5%;
+	transition:all ease-in-out .5s;
+}
+
+.button:hover:before {
+	transform: skew(-30deg) translateX(0%) translateY(-50%) translateZ(0) scale(1.0, 1.0);
+}
+
+.button:after {
+	position: absolute;
+    content: '';
+    display: block;
+    transform-origin: right center;
+    width: 130%;
+    height: 102%;
+    background: #545454;
+    transform: skew(-30deg) translateX(-100%) translateY(-50%) translateZ(0) scale(1.1, 1.1);
+    top: 50%;
+    right: -5%;
+	transition:all ease-in-out .7s;
+}
+
+.button:hover:after {
+	transform: skew(-30deg) translateX(0%) translateY(-50%) translateZ(0) scale(1.1, 1.1);
 }
 
 section .content {
@@ -136,6 +188,38 @@ section .content {
     height: 100vh;
 }
 
+.gradient-line {
+	position:absolute;
+	width:1px;
+	height:17.00000vh;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#888784+0,14130e+100 */
+background: #888784; /* Old browsers */
+background: -moz-linear-gradient(top, #888784 0%, #14130e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #888784 0%,#14130e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #888784 0%,#14130e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888784', endColorstr='#14130e',GradientType=0 ); /* IE6-9 */
+	top:0;
+	left:calc(50% - 1px);
+
+	transition:all ease-in-out 1s;
+	opacity:1;
+}
+
+.gradient-line.reversed {
+	transform:rotate(180deg);
+	top:initial;
+	bottom:0;
+	opacity:0;
+	
+}
+
+body:not(.fp-viewing-0) .gradient-line.reversed  {
+	opacity:1;
+}
+
+body.fp-viewing-5 .gradient-line.straight  {
+	opacity:0;
+}
 
 .polygon {
     top: 50%;
