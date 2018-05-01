@@ -16,6 +16,8 @@
 
 
 
+
+
 /*::-webkit-scrollbar {
     width: 0px; 
     background: transparent;  
@@ -233,6 +235,8 @@ section .content {
 .loader-percentage #loader-percentage-value {
     font-size: 5.39062rem;
 }
+
+
 
 
 
@@ -530,6 +534,8 @@ section .content {
 
 
 
+
+
 /*.polygon .polygon {
 	width:21.87500vw;
 }
@@ -618,11 +624,15 @@ section .content {
 
 
 
+
+
 /* Firefox 19+ */
 
 :-moz-placeholder {
     color: #f2f2f0;
 }
+
+
 
 
 
@@ -652,6 +662,8 @@ section .content {
     top: 3.08594vw;
     right: 3.55469vw;
 }
+
+
 
 
 
@@ -712,6 +724,8 @@ section .content {
 
 
 
+
+
 /*HOME*/
 
 section.home .big-text {
@@ -724,6 +738,8 @@ section.home h1 {
     margin-bottom: 5vw;
     margin-top: 0.4vw;
 }
+
+
 
 
 
@@ -759,7 +775,10 @@ section.services h1 {
 
 section.services .big-text {
     margin-bottom: 1.8vw;
+    margin-bottom: 0.9vh;
 }
+
+
 
 
 
@@ -785,6 +804,8 @@ section.trading-group p {
     line-height: 1.96154;
     padding-top: 0.8vw;
 }
+
+
 
 
 
@@ -849,6 +870,8 @@ section.media h1 {
 
 
 
+
+
 /*INVEST FUND*/
 
 section.invest .invest-fund-content {
@@ -876,6 +899,8 @@ section.invest img {
     top: 4vw;
     left: 50.2vw;
 }
+
+
 
 
 
@@ -926,6 +951,8 @@ section.charity .wallet-address {
     font-size: 1.01562rem;
     letter-spacing: 0.05000em;
 }
+
+
 
 
 
@@ -1051,30 +1078,27 @@ section.charity .wallet-address {
         padding-top: 2vw;
         margin-bottom: 9vw;
     }
-
-/*    section .content {
+    /*    section .content {
         position: absolute;
         top: 18.5%;
         transform: none;
     }*/
-
     /*MEDIA*/
     section.media .big-text {
         line-height: 1.14;
         margin-bottom: 7.8vw;
-        font-size:9rem;
+        font-size: 9rem;
     }
 
     .representatives {
         position: relative;
         width: 100%;
         display: block;
-        margin-bottom:7.8vw;
+        margin-bottom: 7.8vw;
     }
 
     .representatives .row:nth-of-type(1) {
         margin-bottom: 4vw;
-
     }
 
     .representatives img:first-of-type {
@@ -1136,17 +1160,20 @@ section.charity .wallet-address {
     /*SERVIESS MOBILE*/
     section.services h1 {
         margin-bottom: 2.4vw !important;
+        margin-bottom: 1.2vh !important;
     }
 
     section.services p {
         font-size: 3.46667vw;
         line-height: 1.76923;
         letter-spacing: 0.04000em;
+        margin-bottom: 3.5vh;
     }
 
     section.services .two-in-row>div {
         width: initial;
         margin-bottom: 6.1vw;
+        margin-bottom: 3.05vh;
     }
 
 
@@ -1180,5 +1207,175 @@ section.charity .wallet-address {
     section.charity .wallet-address img {
         width: 5.46667vw;
         margin-right: 2.34375vw;
+    }
+
+    /*MENU MOBILE*/
+    .menu-item img,
+    .menu-item .tint {
+        display: none;
+    }
+
+    .menu-content {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .menu-wrapper {
+        padding-left: 12.33333vw;
+        padding-right: 12.33333vw;
+        height: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .menu-bar {
+        display: none;
+    }
+
+    .scroll-to-discover {
+        display: none;
+    }
+
+    .menu-item .big-text {
+        position: relative;
+        top: initial;
+        left: initial;
+        transform: none;
+        opacity: 1;
+    }
+
+    .menu_number {
+        display: none;
+    }
+
+    .menu-item:nth-of-type(2n) {
+        transform: none;
+    }
+
+    .menu-graph {
+        width: 100%;
+        width: 100%;
+        top: 50%;
+        transform-origin: center top;
+        transform: scaleY(1.7) scaleX(1.05) translateY(-50%);
+    }
+
+    .menu .menu-logo {
+        width: 5.46667vw;
+        top: 7.79610%;
+        left: 11.86667%;
+    }
+
+    .menu .close {
+        top: 6.99565%;
+        right: 12.33333%;
+    }
+
+    .close {
+        width: 8.80000vw;
+        height: 8.80000vw;
+    }
+
+    .menu-get-in-touch {
+        right: 16.87500%;
+        right: initial;
+        left: 12%;
+        bottom: 8.5%;
+    }
+
+    .menu .socials {
+        display: flex;
+        bottom: 9.825%;
+        right: 12.78125%;
+    }
+
+    .socials a:nth-of-type(1) {
+        width: 5.33333vw;
+    }
+
+    .socials a:nth-of-type(2) {
+        width: 4.80000vw;
+        margin: 0vw 4.80000vw;
+    }
+
+    .socials a:nth-of-type(3) {
+        width: 5.33333vw;
+    }
+
+    .who-made-it {
+        display: none;
+    }
+
+
+
+
+
+    /*MODAL*/
+    .modal-window {
+        background: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal-window-content {
+        width: 75.20000%;
+        top: 26.68666%;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        padding:0;
+    }
+
+    .modal-window-content .big-text {
+        margin-bottom: 6.29219vw;
+    }
+
+
+    .modal-window-content form input,
+    .modal-window-content form textarea {
+        padding: 3.60625rem;
+        font-size: 3.46667rem;
+    }
+
+    .modal-window-content form input {
+        margin-bottom: 5.47656vw;
+    }
+
+    .modal-window-content form textarea {
+        height: 33.7vw;
+    }
+
+    .modal-window-content form {
+        margin-bottom: 9.45312vw;
+    }
+
+    .modal .close {
+        position: absolute;
+        top: 12.48594vw;
+        right: 10.85469vw;
+    }
+
+    .modal-window-content p {
+    	font-size:3.46667rem;
+    	letter-spacing:0.04000em;
+    	line-height:1.76923;
+    	margin-bottom: 6.29219vw;
+    }
+}
+
+
+
+
+
+@media all and (max-width:1024px) and (max-aspect-ratio:16/9) and (orientation: portrait) {
+    html {
+        font-size: 0.9vw;
+    }
+
+    section.charity .wallet-address {
+    	position:relative;
+    	top:3vh;
     }
 }

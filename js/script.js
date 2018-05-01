@@ -12,6 +12,11 @@ var i = 0;
 
 var previousDirection = 'down';
 $(document).ready(function() {
+
+	if ($(window).width()<=1024) {
+		$('.menu-get-in-touch').addClass('button');
+	}
+
     $('#wrapper').fullpage({
         navigation: true,
         navigationPosition: 'left',
@@ -35,7 +40,7 @@ $(document).ready(function() {
         }
     });
 
-    
+
 
     var modalsOpeningSpeed = 300;
     $('.modal-opener').click(function() {
@@ -162,8 +167,8 @@ $(document).ready(function() {
     motionPath.seek(point1);
 
 
-    var loaderTime=5000;
-    var timerCounter=0;
+    var loaderTime = 5000;
+    var timerCounter = 0;
     $('.loader-svg-container').css('transform', 'scale(' + ($(window).width() + 8) / $('.loader-svg-container').width() + ')');
     var loaderPath = anime.path('#loader-path');
     var loaderPathMotion = anime({
@@ -175,19 +180,53 @@ $(document).ready(function() {
         duration: loaderTime,
         loop: false,
         autoplay: true,
-    }); 
+    });
 
-    var loaderTimer=setInterval(function() {
-    	$('#loader-percentage-value').html(++timerCounter);
-    	if (timerCounter>=100) {
-    		clearInterval(loaderTimer);
+    var loaderTimer = setInterval(function() {
+        $('#loader-percentage-value').html(++timerCounter);
+        if (timerCounter >= 100) {
+            clearInterval(loaderTimer);
 
-    		$('#loader').animate({
-    			opacity: 0},
-    			700, function() {
-    			$(this).css('display','none');
-    		});
-    	}
-    },loaderTime/100)   
+            $('#loader').animate({
+                    opacity: 0
+                },
+                700,
+                function() {
+                    $(this).css('display', 'none');
+                });
+        }
+    }, loaderTime / 100);
+
+    function hasTouch() {
+        return 'ontouchstart' in document.documentElement ||
+            navigator.maxTouchPoints > 0 ||
+            navigator.msMaxTouchPoints > 0;
+    }
+
+
+    if ($(window).width() <= 1024) {
+        if (hasTouch()) { // remove all :hover stylesheets
+            try { // prevent exception on browsers not supporting DOM styleSheets properly
+                for (var si in document.styleSheets) {
+                    var styleSheet = document.styleSheets[si];
+                    if (!styleSheet.rules) continue;
+
+                    for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                        if (!styleSheet.rules[ri].selectorText) continue;
+
+                        if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                            styleSheet.deleteRule(ri);
+                        }
+                    }
+                }
+            } catch (ex) {
+            	console.log(ex);
+            }
+        }
+
+
+
+    }
+
 
 });
