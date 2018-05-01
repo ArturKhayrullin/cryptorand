@@ -1061,6 +1061,9 @@ section.charity .wallet-address {
     .menu-opener {
         top: 8.69565%;
         right: 12.53333%;
+   padding: 30px;     
+   margin: -30px;
+   display:inline-block;         
     }
 
     .menu-opener .open-menu div {
