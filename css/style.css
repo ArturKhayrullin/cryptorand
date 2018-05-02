@@ -1464,6 +1464,8 @@ section.charity .wallet-address {
         top: initial;
         bottom: 33.9%;
         right: 12.78125%;
+        bottom:initial;
+        transform: translateY(173%);
     }
 
     .text-close {

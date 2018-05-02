@@ -86,6 +86,9 @@ $(document).ready(function() {
                     });
             }
         }, loaderTime / 100);    
+        $('#menu').css('display','block');
+        $('.who-made-it').css('top',$('#menu .big-text').last().offset().top+'px');
+        $('#menu').css('display','none');
     }
 
     /*DESKTOP ONLY CODE*/
