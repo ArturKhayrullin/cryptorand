@@ -158,7 +158,7 @@ h1 {
 section .content {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateZ(0);
     width: 66.87500vw;
 }
 
