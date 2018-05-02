@@ -53,39 +53,39 @@ $(document).ready(function() {
         $('.menu-get-in-touch').addClass('button');
         $('.loader-svg-container').css('transform', 'scale(' + ($(window).width() + 8) / ($('.loader-svg-container').width() / 1.8355) + ') translateX(-20%)');
 
-        // loaderPathMotion = anime({
-        //     targets: '#loader-circle',
-        //     translateX: loaderPath('x'),
-        //     translateY: loaderPath('y'),
-        //     rotate: loaderPath('angle'),
-        //     easing: 'linear',
-        //     duration: loaderTime*3,
-        //     loop: false,
-        //     autoplay: false,
-        // });
+        loaderPathMotion = anime({
+            targets: '#loader-circle',
+            translateX: loaderPath('x'),
+            translateY: loaderPath('y'),
+            rotate: loaderPath('angle'),
+            easing: 'linear',
+            duration: loaderTime*3,
+            loop: false,
+            autoplay: false,
+        });
 
-        // loaderPathMotion.seek(3050);
-        // loaderPathMotion.play();
+        loaderPathMotion.seek(3050);
+        loaderPathMotion.play();
 
-        // var pathTimeout = setTimeout(function() {
+        var pathTimeout = setTimeout(function() {
 
-        // }, loaderTime)
+        }, loaderTime)
 
-        // var loaderTimer = setInterval(function() {
-        //     $('#loader-percentage-value').html(++timerCounter);
-        //     if (timerCounter >= 100) {
-        //         clearInterval(loaderTimer);
+        var loaderTimer = setInterval(function() {
+            $('#loader-percentage-value').html(++timerCounter);
+            if (timerCounter >= 100) {
+                clearInterval(loaderTimer);
 
-        //         $('#loader').animate({
-        //                 opacity: 0
-        //             },
-        //             modalsOpeningSpeed,
-        //             function() {
-        //                 $(this).css('display', 'none');
-        //                 loaderPathMotion.pause();
-        //             });
-        //     }
-        // }, loaderTime / 100);    
+                $('#loader').animate({
+                        opacity: 0
+                    },
+                    modalsOpeningSpeed,
+                    function() {
+                        $(this).css('display', 'none');
+                        loaderPathMotion.pause();
+                    });
+            }
+        }, loaderTime / 100);    
     }
 
     /*DESKTOP ONLY CODE*/
@@ -95,31 +95,31 @@ $(document).ready(function() {
 
         $('#main_polygon_div').css('transform', 'translate(-50%, -50%) scale(' + (($(window).height() * 0.50312) / 487.15) + ')');
         $('.loader-svg-container').css('transform', 'scale(' + ($(window).width() + 8) / ($('.loader-svg-container').width()) + ')');
-        // loaderPathMotion = anime({
-        //     targets: '#loader-circle',
-        //     translateX: loaderPath('x'),
-        //     translateY: loaderPath('y'),
-        //     rotate: loaderPath('angle'),
-        //     easing: 'linear',
-        //     duration: loaderTime*1.2,
-        //     loop: false,
-        //     autoplay: true,
-        // });
+        loaderPathMotion = anime({
+            targets: '#loader-circle',
+            translateX: loaderPath('x'),
+            translateY: loaderPath('y'),
+            rotate: loaderPath('angle'),
+            easing: 'linear',
+            duration: loaderTime*1.2,
+            loop: false,
+            autoplay: true,
+        });
 
-        // var loaderTimer = setInterval(function() {
-        //     $('#loader-percentage-value').html(++timerCounter);
-        //     if (timerCounter >= 100) {
-        //         clearInterval(loaderTimer);
+        var loaderTimer = setInterval(function() {
+            $('#loader-percentage-value').html(++timerCounter);
+            if (timerCounter >= 100) {
+                clearInterval(loaderTimer);
 
-        //         $('#loader').animate({
-        //                 opacity: 0
-        //             },
-        //             modalsOpeningSpeed,
-        //             function() {
-        //                 $(this).css('display', 'none');
-        //             });
-        //     }
-        // }, loaderTime / 100);        
+                $('#loader').animate({
+                        opacity: 0
+                    },
+                    modalsOpeningSpeed,
+                    function() {
+                        $(this).css('display', 'none');
+                    });
+            }
+        }, loaderTime / 100);        
 
     }
 
