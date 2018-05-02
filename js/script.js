@@ -49,78 +49,78 @@ $(document).ready(function() {
 
 
     /*MOBILE ONLY CODE*/
-    if ($(window).width() <= 1024) {
+    if ($(window).width() <= 750) {
         $('.menu-get-in-touch').addClass('button');
         $('.loader-svg-container').css('transform', 'scale(' + ($(window).width() + 8) / ($('.loader-svg-container').width() / 1.8355) + ') translateX(-20%)');
-	    
-	    loaderPathMotion = anime({
-	        targets: '#loader-circle',
-	        translateX: loaderPath('x'),
-	        translateY: loaderPath('y'),
-	        rotate: loaderPath('angle'),
-	        easing: 'linear',
-	        duration: loaderTime*3,
-	        loop: false,
-	        autoplay: false,
-	    });
 
-	    loaderPathMotion.seek(3050);
-	    loaderPathMotion.play();
+        // loaderPathMotion = anime({
+        //     targets: '#loader-circle',
+        //     translateX: loaderPath('x'),
+        //     translateY: loaderPath('y'),
+        //     rotate: loaderPath('angle'),
+        //     easing: 'linear',
+        //     duration: loaderTime*3,
+        //     loop: false,
+        //     autoplay: false,
+        // });
 
-	    var pathTimeout = setTimeout(function() {
-	    	
-	    }, loaderTime)
+        // loaderPathMotion.seek(3050);
+        // loaderPathMotion.play();
 
-	    var loaderTimer = setInterval(function() {
-	        $('#loader-percentage-value').html(++timerCounter);
-	        if (timerCounter >= 100) {
-	            clearInterval(loaderTimer);
+        // var pathTimeout = setTimeout(function() {
 
-	            $('#loader').animate({
-	                    opacity: 0
-	                },
-	                modalsOpeningSpeed,
-	                function() {
-	                    $(this).css('display', 'none');
-	                    loaderPathMotion.pause();
-	                });
-	        }
-	    }, loaderTime / 100);    
+        // }, loaderTime)
+
+        // var loaderTimer = setInterval(function() {
+        //     $('#loader-percentage-value').html(++timerCounter);
+        //     if (timerCounter >= 100) {
+        //         clearInterval(loaderTimer);
+
+        //         $('#loader').animate({
+        //                 opacity: 0
+        //             },
+        //             modalsOpeningSpeed,
+        //             function() {
+        //                 $(this).css('display', 'none');
+        //                 loaderPathMotion.pause();
+        //             });
+        //     }
+        // }, loaderTime / 100);    
     }
 
     /*DESKTOP ONLY CODE*/
 
-    if ($(window).width() > 1024) {
+    if ($(window).width() > 750) {
         /*BACKGROUND POLYGONS SIZE*/
 
         $('#main_polygon_div').css('transform', 'translate(-50%, -50%) scale(' + (($(window).height() * 0.50312) / 487.15) + ')');
         $('.loader-svg-container').css('transform', 'scale(' + ($(window).width() + 8) / ($('.loader-svg-container').width()) + ')');
-	    loaderPathMotion = anime({
-	        targets: '#loader-circle',
-	        translateX: loaderPath('x'),
-	        translateY: loaderPath('y'),
-	        rotate: loaderPath('angle'),
-	        easing: 'linear',
-	        duration: loaderTime*1.2,
-	        loop: false,
-	        autoplay: true,
-	    });
+        // loaderPathMotion = anime({
+        //     targets: '#loader-circle',
+        //     translateX: loaderPath('x'),
+        //     translateY: loaderPath('y'),
+        //     rotate: loaderPath('angle'),
+        //     easing: 'linear',
+        //     duration: loaderTime*1.2,
+        //     loop: false,
+        //     autoplay: true,
+        // });
 
-	    var loaderTimer = setInterval(function() {
-	        $('#loader-percentage-value').html(++timerCounter);
-	        if (timerCounter >= 100) {
-	            clearInterval(loaderTimer);
+        // var loaderTimer = setInterval(function() {
+        //     $('#loader-percentage-value').html(++timerCounter);
+        //     if (timerCounter >= 100) {
+        //         clearInterval(loaderTimer);
 
-	            $('#loader').animate({
-	                    opacity: 0
-	                },
-	                modalsOpeningSpeed,
-	                function() {
-	                    $(this).css('display', 'none');
-	                });
-	        }
-	    }, loaderTime / 100);        
-    
+        //         $('#loader').animate({
+        //                 opacity: 0
+        //             },
+        //             modalsOpeningSpeed,
+        //             function() {
+        //                 $(this).css('display', 'none');
+        //             });
+        //     }
+        // }, loaderTime / 100);        
+
     }
 
 
@@ -197,13 +197,20 @@ $(document).ready(function() {
 
     var scrollPercentage;
 
-    $(".menu-wrapper").mousewheel(function(event) {
+    var isSafari=false;
+    var scrollingFactor=1;
+    if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+    	scrollingFactor=0.15;
+    }
 
+    $(".menu-wrapper").mousewheel(function(event) {
         event.preventDefault();
-        this.scrollLeft -= (event.deltaY * event.deltaFactor);
+        if (event.deltaX != 0)
+            this.scrollLeft -= (event.deltaX * event.deltaFactor*scrollingFactor);
+        else
+            this.scrollLeft -= (event.deltaY * event.deltaFactor*scrollingFactor);
 
         scrollPercentage = Math.round(100 * $(this).scrollLeft() / ($('.menu-content').width() - $(this).width()));
-        console.log(scrollPercentage);
 
         $('.menu-bar-handle').css('left', scrollPercentage + '%').css('transform', 'translateX(-' + scrollPercentage + '%)');
         $('.menu-graph').css('left', -9 * (scrollPercentage / 100) + '%');
@@ -212,7 +219,7 @@ $(document).ready(function() {
 
     $('.slide-opener').click(function() {
         var slideToScrollTo = $(this).attr('data-slide');
-        $('.menu').animate({
+        $('.menu, .opened').animate({
                 opacity: 0
             },
             modalsOpeningSpeed,
@@ -260,7 +267,7 @@ $(document).ready(function() {
     }
 
 
-    if ($(window).width() <= 1024) {
+    if ($(window).width() <= 750) {
         if (hasTouch()) { // remove all :hover stylesheets
             try { // prevent exception on browsers not supporting DOM styleSheets properly
                 for (var si in document.styleSheets) {

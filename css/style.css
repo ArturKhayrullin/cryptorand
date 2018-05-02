@@ -18,6 +18,7 @@
 
 
 
+
 /*::-webkit-scrollbar {
     width: 0px; 
     background: transparent;  
@@ -83,7 +84,7 @@ h1 {
     display: inline-block;
     background: none;
     border: 0.5px solid #545454;
-    background:transparent;
+    background: transparent;
     border-radius: 1000px;
     font-size: 1.01562rem;
     color: #f2f2f0;
@@ -92,44 +93,44 @@ h1 {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    position:relative;
-    overflow:hidden;
-    transform:translateZ(0) scale(1.0, 1.0);
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0) scale(1.0, 1.0);
 
     /*	outline:none;*/
 }
 
 .button.filled {
-	background-color:#545454;
+    background-color: #545454;
 }
 
 
 
 .button span {
-	position:relative;
-	z-index:100;
+    position: relative;
+    z-index: 100;
 }
 
 .button:before {
-	position: absolute;
+    position: absolute;
     content: '';
     display: block;
     transform-origin: right center;
     width: 130%;
     height: 102%;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     transform: skew(-30deg) translateX(-100%) translateY(-50%) translateZ(0) scale(1.0, 1.0);
     top: 50%;
     right: -5%;
-	transition:all ease-in-out .5s;
+    transition: all ease-in-out .5s;
 }
 
 .button:hover:before {
-	transform: skew(-30deg) translateX(0%) translateY(-50%) translateZ(0) scale(1.0, 1.0);
+    transform: skew(-30deg) translateX(0%) translateY(-50%) translateZ(0) scale(1.0, 1.0);
 }
 
 .button:after {
-	position: absolute;
+    position: absolute;
     content: '';
     display: block;
     transform-origin: right center;
@@ -139,11 +140,15 @@ h1 {
     transform: skew(-30deg) translateX(-100%) translateY(-50%) translateZ(0) scale(1.1, 1.1);
     top: 50%;
     right: -5%;
-	transition:all ease-in-out .7s;
+    transition: all ease-in-out .7s;
 }
 
 .button:hover:after {
-	transform: skew(-30deg) translateX(0%) translateY(-50%) translateZ(0) scale(1.1, 1.1);
+    transform: skew(-30deg) translateX(0%) translateY(-50%) translateZ(0) scale(1.1, 1.1);
+}
+
+.button, button {
+	outline:none;
 }
 
 section .content {
@@ -189,39 +194,43 @@ section .content {
 }
 
 .gradient-line {
-	position:absolute;
-	width:1px;
-	height:17.00000vh;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#888784+0,14130e+100 */
-background: #888784; /* Old browsers */
-background: -moz-linear-gradient(top, #888784 0%, #14130e 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #888784 0%,#14130e 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #888784 0%,#14130e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888784', endColorstr='#14130e',GradientType=0 ); /* IE6-9 */
-	top:0;
-	left:calc(50% - 1px);
+    position: absolute;
+    width: 1px;
+    height: 17.00000vh;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#888784+0,14130e+100 */
+    background: #888784;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #888784 0%, #14130e 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #888784 0%, #14130e 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #888784 0%, #14130e 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888784', endColorstr='#14130e', GradientType=0);
+    /* IE6-9 */
+    top: 0;
+    left: calc(50% - 1px);
 
-	transition:all ease-in-out 1s;
-	opacity:1;
+    transition: all ease-in-out 1s;
+    opacity: 1;
 }
 
 .gradient-line.reversed {
-	transform:rotate(180deg);
-	top:initial;
-	bottom:0;
-	opacity:0;
-	
+    transform: rotate(180deg);
+    top: initial;
+    bottom: 0;
+    opacity: 0;
 }
 
-body:not(.fp-viewing-0) .gradient-line.reversed  {
-	opacity:1;
+body:not(.fp-viewing-0) .gradient-line.reversed {
+    opacity: 1;
 }
 
-body.fp-viewing-5 .gradient-line.straight  {
-	opacity:0;
+body.fp-viewing-5 .gradient-line.straight {
+    opacity: 0;
 }
 
-.polygon {
+.background-stuff .polygon {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -229,11 +238,11 @@ body.fp-viewing-5 .gradient-line.straight  {
 }
 
 
-.polygon .polygon {
+.background-stuff .polygon .polygon {
     width: calc(100% - 83.28754px);
 }
 
-.polygon #polygon-circle {
+.background-stuff .polygon #polygon-circle {
     width: 27px;
     height: 27px;
     background: rgba(255, 255, 255, 0.2);
@@ -244,7 +253,7 @@ body.fp-viewing-5 .gradient-line.straight  {
     left: -13px;
 }
 
-.polygon #polygon-circle .inner-circle {
+.background-stuff .polygon #polygon-circle .inner-circle {
     position: absolute;
     width: 15px;
     height: 15px;
@@ -327,6 +336,7 @@ body.fp-viewing-5 .gradient-line.straight  {
 
 
 
+
 /*.loader #menu-background-graph {
     width: calc(100% + 8px);
     bottom: -2px;
@@ -342,7 +352,7 @@ body.fp-viewing-5 .gradient-line.straight  {
     z-index: 1001;
     background: #0a0a0a;
     width: 100%;
-    height:100%;
+    height: 100%;
     opacity: 0;
     display: none;
     overflow: hidden;
@@ -525,6 +535,9 @@ body.fp-viewing-5 .gradient-line.straight  {
     border: none;
     top: 9.125%;
     right: 6.18125%;
+        padding: 30px;
+        margin: -30px;
+        display: inline-block;    
 }
 
 .menu-opener:hover {
@@ -622,6 +635,7 @@ body.fp-viewing-5 .gradient-line.straight  {
 
 
 
+
 /*.polygon .polygon {
 	width:21.87500vw;
 }
@@ -635,13 +649,34 @@ body.fp-viewing-5 .gradient-line.straight  {
 }*/
 
 .modal {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     background: #0a0a0a;
     z-index: 1001;
     display: none;
     opacity: 0;
+}
+
+
+
+.modal .polygon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    transform: translateY(-8%) translateX(27%);
+}
+
+.modal .polygon svg {
+    width: auto;
+}
+
+.modal .polygon .polygon {
+    height: calc(100% - 20vh);
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
 }
 
 .modal-window {
@@ -712,11 +747,13 @@ body.fp-viewing-5 .gradient-line.straight  {
 
 
 
+
 /* Firefox 19+ */
 
 :-moz-placeholder {
     color: #f2f2f0;
 }
+
 
 
 
@@ -750,8 +787,28 @@ body.fp-viewing-5 .gradient-line.straight  {
 }
 
 
+#thank-you-modal .modal-window {
+    background: none;
+    width: auto;
+    height: auto;
+}
 
+#thank-you-modal .modal-window-content {
+    width: auto;
+    height: auto;
+    top: initial;
+    transform: initial;
+    left: initial;
+}
 
+#thank-you-modal .modal-window-content .button {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#thank-you-modal.modal .close {
+    display: none;
+}
 
 
 
@@ -812,6 +869,7 @@ body.fp-viewing-5 .gradient-line.straight  {
 
 
 
+
 /*HOME*/
 
 section.home .big-text {
@@ -824,6 +882,7 @@ section.home h1 {
     margin-bottom: 5vw;
     margin-top: 0.4vw;
 }
+
 
 
 
@@ -869,6 +928,7 @@ section.services .big-text {
 
 
 
+
 /*TRADING GROUP*/
 
 section.trading-group .big-text {
@@ -890,6 +950,7 @@ section.trading-group p {
     line-height: 1.96154;
     padding-top: 0.8vw;
 }
+
 
 
 
@@ -958,6 +1019,7 @@ section.media h1 {
 
 
 
+
 /*INVEST FUND*/
 
 section.invest .invest-fund-content {
@@ -985,6 +1047,7 @@ section.invest img {
     top: 4vw;
     left: 50.2vw;
 }
+
 
 
 
@@ -1046,9 +1109,10 @@ section.charity .wallet-address {
 
 
 
+
 /*MOBILE*/
 
-@media all and (max-width:1024px) {
+@media all and (max-width:750px) {
     .logo {
         top: 7.79610%;
         left: 11.86667%;
@@ -1061,9 +1125,7 @@ section.charity .wallet-address {
     .menu-opener {
         top: 8.69565%;
         right: 12.53333%;
-   padding: 30px;     
-   margin: -30px;
-   display:inline-block;         
+
     }
 
     .menu-opener .open-menu div {
@@ -1368,11 +1430,11 @@ section.charity .wallet-address {
     }
 
     .menu-get-in-touch {
-    	top:initial;
+        top: initial;
         right: initial;
         left: 12%;
         bottom: 8.5%;
-        display:block;
+        display: block;
     }
 
     .menu .socials {
@@ -1395,7 +1457,21 @@ section.charity .wallet-address {
     }
 
     .who-made-it {
-        display: none;
+        font-size: 3.20000rem;
+        letter-spacing: 0.02500em;
+        left: initial;
+        transform: none;
+        top: initial;
+        bottom: 33.9%;
+        right: 12.78125%;
+    }
+
+    .text-close {
+        font-size: 3.46667rem;
+    }
+
+    #who-made-it-modal svg {
+        width: 74.241vw;
     }
 
 
@@ -1413,9 +1489,9 @@ section.charity .wallet-address {
         width: 75.20000%;
         top: 26.68666%;
         left: 50%;
-        top:50%;
+        top: 50%;
         transform: translate(-50%, -50%);
-        padding:0;
+        padding: 0;
     }
 
     .modal-window-content .big-text {
@@ -1448,22 +1524,42 @@ section.charity .wallet-address {
     }
 
     .modal-window-content p {
-    	font-size:3.46667rem;
-    	letter-spacing:0.04000em;
-    	line-height:1.76923;
-    	margin-bottom: 6.29219vw;
+        font-size: 3.46667rem;
+        letter-spacing: 0.04000em;
+        line-height: 1.76923;
+        margin-bottom: 6.29219vw;
+    }
+
+
+    .modal .polygon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 119.86507%;
+        transform: translateY(-38.651%) translateX(66%);
+    }
+
+    .modal .polygon svg {
+        width: auto;
+    }
+
+    .modal .polygon .polygon {
+        height: calc(100% - 23.98801vh);
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
     }
 
     .loader-percentage {
-    	font-size:9.60000rem;
-    	bottom:initial;
-    	top:29.98501%;
-    	left:50%;
-    	transform:translateX(-50%);
+        font-size: 9.60000rem;
+        bottom: initial;
+        top: 29.98501%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .loader-percentage #loader-percentage-value {
-    	font-size:19.20000rem;
+        font-size: 19.20000rem;
     }
 }
 
@@ -1471,13 +1567,13 @@ section.charity .wallet-address {
 
 
 
-@media all and (max-width:1024px) and (max-aspect-ratio:16/9) and (orientation: portrait) {
+@media all and (max-width:750px) and (max-aspect-ratio:16/9) and (orientation: portrait) {
     html {
         font-size: 0.9vw;
     }
 
     section.charity .wallet-address {
-    	position:relative;
-    	top:3vh;
+        position: relative;
+        top: 3vh;
     }
 }
