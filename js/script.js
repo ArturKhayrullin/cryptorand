@@ -203,15 +203,18 @@ $(document).ready(function() {
     var isSafari=false;
     var scrollingFactor=1;
     if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-    	scrollingFactor=0.15;
+    	scrollingFactor=0.4;
     }
 
     $(".menu-wrapper").mousewheel(function(event) {
-        event.preventDefault();
-        if (event.deltaX != 0)
-            this.scrollLeft -= (event.deltaX * event.deltaFactor*scrollingFactor);
-        else
+        
+        if (event.deltaX != 0) {
+            // this.scrollLeft -= (event.deltaX * event.deltaFactor*scrollingFactor);
+        }
+        else {
+            event.preventDefault();
             this.scrollLeft -= (event.deltaY * event.deltaFactor*scrollingFactor);
+        }
 
         scrollPercentage = Math.round(100 * $(this).scrollLeft() / ($('.menu-content').width() - $(this).width()));
 
