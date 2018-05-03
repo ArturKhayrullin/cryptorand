@@ -259,7 +259,7 @@ body.fp-viewing-5 .gradient-line.straight {
 
 
 .background-stuff .polygon .polygon {
-    width: calc(100% - 83.28754px);
+    width: calc(100% - 83px);
 }
 
 .background-stuff .polygon #polygon-circle {
@@ -744,6 +744,7 @@ body.fp-viewing-5 .gradient-line.straight {
     letter-spacing: 0.05000em;
     padding: 1.30625rem;
     border: none;
+    border-radius:0px;
 }
 
 .modal-window-content form input {
@@ -1134,7 +1135,7 @@ section.charity .wallet-address {
 
 @media all and (max-width:750px) {
     .logo {
-        top: 7.79610%;
+        top: 6.79610%;
         left: 11.86667%;
     }
 
@@ -1143,7 +1144,7 @@ section.charity .wallet-address {
     }
 
     .menu-opener {
-        top: 8.69565%;
+        top: 7.69565%;
         right: 12.53333%;
 
     }
@@ -1171,6 +1172,7 @@ section.charity .wallet-address {
     section .content {
         width: initial;
         width: 75.33334vw;
+        transform:translateY(-47%);
     }
 
     section h1 {
@@ -1219,6 +1221,7 @@ section.charity .wallet-address {
         background-size: cover;
         left: 12.5vw;
         bottom: 14.6vw;
+        bottom: 6.79610%;;
     }
 
     .socials {
@@ -1435,12 +1438,12 @@ section.charity .wallet-address {
 
     .menu .menu-logo {
         width: 5.46667vw;
-        top: 7.79610%;
+        top: 6.79610%;
         left: 11.86667%;
     }
 
     .menu .close {
-        top: 6.99565%;
+        top: 5.99565%;
         right: 12.33333%;
     }
 
@@ -1453,13 +1456,13 @@ section.charity .wallet-address {
         top: initial;
         right: initial;
         left: 12%;
-        bottom: 8.5%;
+        bottom: 7.5%;
         display: block;
     }
 
     .menu .socials {
         display: flex;
-        bottom: 9.825%;
+        bottom: 8.825%;
         right: 12.78125%;
     }
 

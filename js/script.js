@@ -14,7 +14,7 @@ var previousDirection = 'down';
 /*MODALS SPEED*/
 var modalsOpeningSpeed = 700;
 /*LOADER TIME*/
-var loaderTime = 5000;
+var loaderTime = 3000;
 var loaderPath;
 var loaderPathMotion;
 $(document).ready(function() {
@@ -64,12 +64,8 @@ $(document).ready(function() {
             autoplay: false,
         });
 
-        loaderPathMotion.seek(3050);
+        loaderPathMotion.seek(1900);
         loaderPathMotion.play();
-
-        var pathTimeout = setTimeout(function() {
-
-        }, loaderTime)
 
         var loaderTimer = setInterval(function() {
             $('#loader-percentage-value').html(++timerCounter);
@@ -85,7 +81,7 @@ $(document).ready(function() {
                         loaderPathMotion.pause();
                     });
             }
-        }, loaderTime / 100);    
+        }, loaderTime*0.5 / 100);    
         $('#menu').css('display','block');
         $('.who-made-it').css('top',$('#menu .big-text').last().offset().top+'px');
         $('#menu').css('display','none');
