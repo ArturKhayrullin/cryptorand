@@ -219,7 +219,7 @@ $(document).ready(function() {
         scrollPercentage = Math.round(100 * $(this).scrollLeft() / ($('.menu-content').width() - $(this).width()));
 
         $('.menu-bar-handle').css('left', scrollPercentage + '%').css('transform', 'translateX(-' + scrollPercentage + '%)');
-        $('.menu-graph').css('left', -9 * (scrollPercentage / 100) + '%');
+        // $('.menu-graph').css('left', -9 * (scrollPercentage / 100) + '%');
 
     });
 
