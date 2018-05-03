@@ -158,12 +158,22 @@ h1 {
 section .content {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) translateZ(0);
+    transform: translate3d(0,0,0) translateY(-50%) translateZ(0);
     width: 66.87500vw;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    background:transparent;
 }
 
-section, section .content {
+section {
 	background:transparent;
+        -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    transform:translate3d(0,0,0) translateZ(0);
 }
 
 
