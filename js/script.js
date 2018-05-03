@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 
     /*MOBILE ONLY CODE*/
-    if ($(window).width() <= 750) {
+    if ($(window).width() <=750 && (window.innerWidth < window.innerHeight)) {
         $('.menu-get-in-touch').addClass('button');
         $('.loader-svg-container').css('transform', 'scale(' + ($(window).width() + 8) / ($('.loader-svg-container').width() / 1.8355) + ') translateX(-20%)');
 
@@ -89,7 +89,7 @@ $(document).ready(function() {
 
     /*DESKTOP ONLY CODE*/
 
-    if ($(window).width() > 750) {
+    else {
         /*BACKGROUND POLYGONS SIZE*/
 
         $('#main_polygon_div').css('transform', 'translate(-50%, -50%) scale(' + (($(window).height() * 0.50312) / 487.15) + ')');

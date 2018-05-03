@@ -1133,7 +1133,7 @@ section.charity .wallet-address {
 
 /*MOBILE*/
 
-@media all and (max-width:750px) {
+@media all and (max-width:750px) and (orientation: portrait) {
     .logo {
         top: 6.79610%;
         left: 11.86667%;
