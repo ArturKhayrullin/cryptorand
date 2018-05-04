@@ -727,8 +727,8 @@ body.fp-viewing-5 .gradient-line.straight {
     margin-bottom: 1.25312vw;
 }
 
-.modal-window-content form {
-    margin-bottom: 1.25312vw;
+.modal-window-content button {
+    margin-top: 1.25312vw;
 }
 
 
@@ -745,6 +745,7 @@ body.fp-viewing-5 .gradient-line.straight {
     padding: 1.30625rem;
     border: none;
     border-radius:0px;
+    color: #f2f2f0;
 }
 
 .modal-window-content form input {
@@ -1538,8 +1539,8 @@ section.charity .wallet-address {
         height: 33.7vw;
     }
 
-    .modal-window-content form {
-        margin-bottom: 9.45312vw;
+    .modal-window-content button {
+        margin-top: 9.45312vw;
     }
 
     .modal .close {

@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 
     /*MOBILE ONLY CODE*/
-    if ($(window).width() <=750 && (window.innerWidth < window.innerHeight)) {
+    if ($(window).width() <= 750 && (window.innerWidth < window.innerHeight)) {
         $('.menu-get-in-touch').addClass('button');
         $('.loader-svg-container').css('transform', 'scale(' + ($(window).width() + 8) / ($('.loader-svg-container').width() / 1.8355) + ') translateX(-20%)');
 
@@ -59,7 +59,7 @@ $(document).ready(function() {
             translateY: loaderPath('y'),
             rotate: loaderPath('angle'),
             easing: 'linear',
-            duration: loaderTime*3,
+            duration: loaderTime * 3,
             loop: false,
             autoplay: false,
         });
@@ -81,14 +81,13 @@ $(document).ready(function() {
                         loaderPathMotion.pause();
                     });
             }
-        }, loaderTime*0.5 / 100);    
-        $('#menu').css('display','block');
-        $('.who-made-it').css('top',$('#menu .big-text').last().offset().top+'px');
-        $('#menu').css('display','none');
+        }, loaderTime * 0.5 / 100);
+        $('#menu').css('display', 'block');
+        $('.who-made-it').css('top', $('#menu .big-text').last().offset().top + 'px');
+        $('#menu').css('display', 'none');
     }
 
     /*DESKTOP ONLY CODE*/
-
     else {
         /*BACKGROUND POLYGONS SIZE*/
 
@@ -100,7 +99,7 @@ $(document).ready(function() {
             translateY: loaderPath('y'),
             rotate: loaderPath('angle'),
             easing: 'linear',
-            duration: loaderTime*1.2,
+            duration: loaderTime * 1.2,
             loop: false,
             autoplay: true,
         });
@@ -118,7 +117,7 @@ $(document).ready(function() {
                         $(this).css('display', 'none');
                     });
             }
-        }, loaderTime / 100);        
+        }, loaderTime / 100);
 
     }
 
@@ -196,17 +195,17 @@ $(document).ready(function() {
 
     var scrollPercentage;
 
-    var isSafari=false;
-    var scrollingFactor=1;
-    if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-    	scrollingFactor=0.5;
+    var isSafari = false;
+    var scrollingFactor = 1;
+    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+        scrollingFactor = 0.5;
     }
 
     $(".menu-wrapper").mousewheel(function(event) {
         // console.log(event.deltaX);
 
-            event.preventDefault();
-            this.scrollLeft -= (event.deltaY * event.deltaFactor*scrollingFactor);
+        event.preventDefault();
+        this.scrollLeft -= (event.deltaY * event.deltaFactor * scrollingFactor);
 
         scrollPercentage = Math.round(100 * $(this).scrollLeft() / ($('.menu-content').width() - $(this).width()));
 
@@ -288,6 +287,60 @@ $(document).ready(function() {
 
 
     }
+
+
+    $('form').submit(function(e) {
+        var button = $(this).find('button').first();
+        e.preventDefault();
+        $.ajax({
+                url: './get-in-touch.php',
+                type: 'POST',
+                data: {
+                    first_name: $(this).find('[name=name]').val(),
+                    email: $(this).find('[name=email]').val(),
+                    message: $(this).find('[name=message]').val()
+                }
+            })
+            .done(function(data) {
+                console.log(data);
+
+            })
+            .fail(function() {
+
+            })
+            .always(function() {
+
+                if ($('.opened').length > 0) {
+                    $('.opened').animate({
+                            opacity: 0
+                        },
+                        modalsOpeningSpeed,
+                        function() {
+
+                            $(this).removeClass('opened').hide(0, function() {
+                                console.log('opened hidden');
+                                $.fn.fullpage.setAllowScrolling(true);
+                                $('#' + $(button).attr('data-modal')).addClass('opened').show(0, function() {
+                                    console.log('opened shown')
+                                    $('#' + $(button).attr('data-modal')).animate({ opacity: 1 }, modalsOpeningSpeed);
+                                });
+
+                            });
+
+
+                        });
+                } else {
+                    $('#' + $(button).attr('data-modal')).addClass('opened').show(0, function() {
+                        console.log('opened shown')
+                        $('#' + $(button).attr('data-modal')).animate({ opacity: 1 }, modalsOpeningSpeed);
+                    });
+                }
+
+                $.fn.fullpage.setAllowScrolling(false);
+            });
+
+
+    });
 
 
 });

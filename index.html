@@ -532,13 +532,14 @@
                     GET IN TOUCH
                 </div>
                 <form>
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="E-mail" required>
-                    <textarea name="message" placeholder="Message"></textarea>
+                    <input tabindex="1" type="text" name="name" placeholder="Name" required>
+                    <input tabindex="2" type="email" name="email" placeholder="E-mail" required>
+                    <textarea tabindex="3" name="message" placeholder="Message"></textarea>
+                    <button tabindex="4" type="submit" class="button" data-modal="thank-you-modal" id="submit_form">
+                        <span>Get in Touch</span>
+                    </button>                    
                 </form>
-                <button class="button modal-opener" data-modal="thank-you-modal">
-                    <span>Get in Touch</span>
-                </button>
+
             </div>
             <button class="close">
             </button>
